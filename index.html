@@ -90,6 +90,35 @@
   .fun-sub { font-size: 13px; color: var(--hint); margin-top: 3px; }
   .fun-tag { flex: none; font-size: 12px; font-weight: 700; color: #000; background: #fff; padding: 5px 9px; border-radius: 99px; }
 
+  /* прогноз — карточка в приложении */
+  .fc-card { margin-top: 18px; padding: 22px 18px 18px; border-radius: 24px; background: #fff; color: #0a0a0a;
+             background-image: radial-gradient(#0a0a0a14 1.2px, transparent 1.2px); background-size: 18px 18px; }
+  .fc-bot { font-size: 12px; color: #6b6b73; }
+  .fc-h { font-size: 34px; font-weight: 800; letter-spacing: -.03em; line-height: 1.05; margin-top: 6px; }
+  .fc-h span { display: inline-block; background: #0a0a0a; color: #fff; padding: 0 10px 4px; border-radius: 12px; margin-top: 4px; }
+  .fc-name { margin-top: 12px; display: flex; align-items: center; gap: 8px; }
+  .fc-name input { flex: 1; min-width: 0; font: inherit; font-size: 17px; font-weight: 700; color: #0a0a0a; background: transparent;
+                   border: 0; border-bottom: 1.5px dashed #c8c8ce; padding: 4px 0; outline: none; }
+  .fc-name small { color: #8a8a90; font-size: 12px; }
+  .fc-big { margin-top: 14px; background: #0a0a0a; color: #fff; border-radius: 20px; padding: 16px 18px; display: flex; align-items: center; gap: 14px; }
+  .fc-big b { font-size: 52px; font-weight: 800; letter-spacing: -.03em; line-height: 1; }
+  .fc-big div { font-size: 14px; font-weight: 600; line-height: 1.3; }
+  .fc-big small { display: block; color: #9a9aa2; font-weight: 400; font-size: 12px; margin-top: 4px; }
+  .fc-rows { margin-top: 16px; }
+  .fc-row { margin-bottom: 12px; }
+  .fc-row-h { display: flex; justify-content: space-between; font-size: 15px; font-weight: 700; }
+  .fc-bar { height: 8px; border-radius: 6px; background: #ececf0; margin-top: 6px; overflow: hidden; }
+  .fc-bar i { display: block; height: 100%; background: #0a0a0a; border-radius: 6px; transition: width .6s ease; }
+  .fc-det { margin-top: 6px; }
+  .fc-det div { margin-top: 10px; }
+  .fc-det small { display: block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #8a8a90; }
+  .fc-det p { margin: 2px 0 0; font-size: 15px; }
+  .locked .fc-lock { filter: blur(6px); user-select: none; }
+  .fc-lockbar { display: none; margin-top: 14px; text-align: center; font-size: 13px; color: #55555c; }
+  .locked .fc-lockbar { display: block; }
+  .fc-note { margin-top: 12px; font-size: 12.5px; color: var(--dim); text-align: center; }
+  .cta.light { background: #1a1a1d; color: #fff; border: 1px solid #2c2c30; margin-top: 10px; }
+
   /* шаги */
   .steps { margin: 0; padding: 0; list-style: none; counter-reset: s; }
   .steps li { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
@@ -174,7 +203,7 @@
 </div>
 
 <script>
-const C = {"bot":"econom_lab_bot","support":"econom_lab_support","built":"16.10.2026","subjects":[{"code":"econ","icon":"📊","name":"Экономика"},{"code":"info","icon":"💻","name":"Введение в информационные процессы"},{"code":"hist","icon":"📜","name":"История России"},{"code":"bzd","icon":"🦺","name":"Безопасность жизнедеятельности"}],"items":[{"id":"lab34","subject":"econ","kind":"calc","title":"Лаба 3-4. Равновесие потребителя (Кобб-Дуглас)","price":299,"about":"Равновесие потребителя с функцией полезности Кобба-Дугласа TU = A·Xᵅ·Yᵝ при доходе I и ценах Pₓ и Pᵧ."},{"id":"lab03","subject":"econ","kind":"calc","title":"Максимизация прибыли конкурентной фирмы","price":299,"about":"Функция издержек TC = FC + aQ + bQ² + cQ³, минимум средних издержек и максимизация прибыли конкурентной фирмы."},{"id":"lab05","subject":"econ","kind":"calc","title":"Расчёт основных производственных фондов (ОПФ)","price":299,"about":"Стоимость здания, оборудования и основных производственных фондов цеха — по строительному объёму, цене 1 м³, мощности и списку оборудования."},{"id":"lab06","subject":"econ","kind":"calc","title":"Расчёт оборотных средств","price":299,"about":"Потребность в оборотных средствах по годовому выпуску, нормам расхода и ценам сырья и энергии."},{"id":"lab07","subject":"econ","kind":"calc","title":"Расчёт численности и фонда оплаты труда","price":299,"about":"Численность рабочих и служащих и фонд оплаты труда — по разрядам, сменам и тарифам."},{"id":"lab08","subject":"econ","kind":"calc","title":"Калькуляция, точка безубыточности, эффективность","price":299,"about":"Калькуляция себестоимости, точка безубыточности и показатели эффективности производства."},{"id":"lab09","subject":"econ","kind":"calc","title":"Обоснование целесообразности кредита","price":299,"about":"Сравнение кредитов трёх банков по сумме, сроку и ставкам: какой вариант выгоднее."},{"id":"lab10","subject":"econ","kind":"calc","title":"Модель Кейнса: фискальная политика","price":299,"about":"Модель Кейнса «доходы — расходы»: равновесный доход, мультипликаторы и последствия фискальной политики."},{"id":"lab11","subject":"econ","kind":"calc","title":"Модель IS-LM: фискальная и монетарная политика","price":299,"about":"Модель IS-LM: равновесие на рынках товаров и денег и сдвиги при фискальной и монетарной политике."},{"id":"kurs","subject":"econ","kind":"kurs","title":"Курсовая: технико-экономическое обоснование цеха","price":800,"about":"Технико-экономическое обоснование цеха одной работой: основные фонды, оборотные средства, персонал и ФОТ, калькуляция и эффективность."},{"id":"vift1","subject":"info","kind":"ready","title":"Отчёт: Word, Excel и поиск в Интернете","price":299,"html":"📄 <b>Готовая работа<\/b> · Word, 26 страниц<br><br><b>Что внутри:<\/b><br>1. Таблицы, формулы и схемы в Microsoft Word<br>2. Деловая игра «Покупаем компьютер»: офисный и графический ПК, принтер — с ценами и ссылками<br>3. Microsoft Excel, задание 43: ВПР, расширенный фильтр, сводная таблица, диаграмма, рассылка в Word<br>4. Поиск информации в Интернете: Google и Yandex, анализ организации по открытым реестрам<br><br>Введение, заключение, оглавление, подписанные рисунки и таблицы, ответы на контрольные вопросы.<br><br>Титульного листа нет — вставь титульник своей группы перед оглавлением."},{"id":"vift2","subject":"info","kind":"ready","title":"Отчёт: Windows, «Проводник» + реферат","price":299,"html":"📄 <b>Готовая работа<\/b> · Word, 21 страница<br><br><b>Что внутри:<\/b><br>1. Графический интерфейс Windows 11: персонализация, панель задач, уведомления, меню «Пуск»<br>2. Программа «Проводник»: запуск, ярлыки, параметры папок, атрибуты файлов<br>3. Реферат «Система защиты информации: правовые, организационные и физические меры» со списком источников<br><br>Скриншоты с подписями, ответы на контрольные вопросы, оглавление.<br><br>Титульного листа нет — вставь титульник своей группы перед оглавлением."},{"id":"bzd_tpl","subject":"bzd","kind":"template","title":"Шаблон реферата с правильным оформлением","price":299,"html":"🧩 <b>Это шаблон, а не готовая работа под твою тему<\/b><br><br>Полностью оформленный реферат, который ты редактируешь под себя: ставишь свою тему и меняешь текст разделов. Главное здесь — <b>правильное оформление<\/b>, оно уже сделано:<br><br>• Times New Roman 14, интервал 1,5, абзацный отступ 1,25 см<br>• поля 30 / 15 / 20 / 20 мм, нумерация страниц внизу по центру<br>• автоматическое содержание — Word обновит его сам<br>• введение, 8 разделов с подразделами, заключение — каждый раздел с новой страницы<br>• список использованных источников по образцу<br><br><b>Пример наполнения:<\/b> «Чрезвычайные ситуации, угрожающие безопасности окружающей среды», 32 страницы.<br><br>⚠️ Текст-пример не для сдачи: его уже покупали другие, и антиплагиат найдёт совпадения. Замени его своим текстом или закажи «✍️ Реферат на свою тему» — его напишут заново под твою тему.<br><br>Титульного листа нет — вставь титульник своей группы перед содержанием."}],"essay":{"price":299,"html":"Пишешь тему — через 2–4 минуты после оплаты получаешь реферат в Word:<br>• введение, 3–4 главы с параграфами, заключение, список источников — 15–20 страниц<br>• оформление как в наших работах по этому предмету — или по твоему образцу, если пришлёшь файл Word<br>• бонус — памятка к защите: главные мысли и вероятные вопросы преподавателя с ответами<br><br>Текст пишет нейросеть, он уникальный. Перед сдачей обязательно прочитай работу и проверь источники и цифры — нейросеть может ошибаться. Учти, что вуз может проверять работы на антиплагиат и использование ИИ.<br><br>Титульный лист бот может сделать сам — по твоим ФИО и группе (бесплатно, кнопка перед оплатой)."},"custom":{"price":350,"html":"Нужна работа, которой нет в списке? Сделаем индивидуально: работы по другим предметам, другой формат оформления, срочные работы.<br><br><b>Как это работает:<\/b><br>1. Оплачиваешь 350 ⭐ в чате бота.<br>2. Бот сразу присылает контакт исполнителя.<br>3. Пишешь ему номер заказа и присылаешь задание: предмет, методичку (файл или фото), вариант и срок."},"reviews":{"count":0,"avg":0.0,"list":[]}};
+const C = {"bot":"econom_lab_bot","support":"econom_lab_support","built":"17.10.2026","subjects":[{"code":"econ","icon":"📊","name":"Экономика"},{"code":"info","icon":"💻","name":"Введение в информационные процессы"},{"code":"hist","icon":"📜","name":"История России"},{"code":"bzd","icon":"🦺","name":"Безопасность жизнедеятельности"}],"items":[{"id":"lab34","subject":"econ","kind":"calc","title":"Лаба 3-4. Равновесие потребителя (Кобб-Дуглас)","price":299,"about":"Равновесие потребителя с функцией полезности Кобба-Дугласа TU = A·Xᵅ·Yᵝ при доходе I и ценах Pₓ и Pᵧ."},{"id":"lab03","subject":"econ","kind":"calc","title":"Максимизация прибыли конкурентной фирмы","price":299,"about":"Функция издержек TC = FC + aQ + bQ² + cQ³, минимум средних издержек и максимизация прибыли конкурентной фирмы."},{"id":"lab05","subject":"econ","kind":"calc","title":"Расчёт основных производственных фондов (ОПФ)","price":299,"about":"Стоимость здания, оборудования и основных производственных фондов цеха — по строительному объёму, цене 1 м³, мощности и списку оборудования."},{"id":"lab06","subject":"econ","kind":"calc","title":"Расчёт оборотных средств","price":299,"about":"Потребность в оборотных средствах по годовому выпуску, нормам расхода и ценам сырья и энергии."},{"id":"lab07","subject":"econ","kind":"calc","title":"Расчёт численности и фонда оплаты труда","price":299,"about":"Численность рабочих и служащих и фонд оплаты труда — по разрядам, сменам и тарифам."},{"id":"lab08","subject":"econ","kind":"calc","title":"Калькуляция, точка безубыточности, эффективность","price":299,"about":"Калькуляция себестоимости, точка безубыточности и показатели эффективности производства."},{"id":"lab09","subject":"econ","kind":"calc","title":"Обоснование целесообразности кредита","price":299,"about":"Сравнение кредитов трёх банков по сумме, сроку и ставкам: какой вариант выгоднее."},{"id":"lab10","subject":"econ","kind":"calc","title":"Модель Кейнса: фискальная политика","price":299,"about":"Модель Кейнса «доходы — расходы»: равновесный доход, мультипликаторы и последствия фискальной политики."},{"id":"lab11","subject":"econ","kind":"calc","title":"Модель IS-LM: фискальная и монетарная политика","price":299,"about":"Модель IS-LM: равновесие на рынках товаров и денег и сдвиги при фискальной и монетарной политике."},{"id":"kurs","subject":"econ","kind":"kurs","title":"Курсовая: технико-экономическое обоснование цеха","price":800,"about":"Технико-экономическое обоснование цеха одной работой: основные фонды, оборотные средства, персонал и ФОТ, калькуляция и эффективность."},{"id":"vift1","subject":"info","kind":"ready","title":"Отчёт: Word, Excel и поиск в Интернете","price":299,"html":"📄 <b>Готовая работа<\/b> · Word, 26 страниц<br><br><b>Что внутри:<\/b><br>1. Таблицы, формулы и схемы в Microsoft Word<br>2. Деловая игра «Покупаем компьютер»: офисный и графический ПК, принтер — с ценами и ссылками<br>3. Microsoft Excel, задание 43: ВПР, расширенный фильтр, сводная таблица, диаграмма, рассылка в Word<br>4. Поиск информации в Интернете: Google и Yandex, анализ организации по открытым реестрам<br><br>Введение, заключение, оглавление, подписанные рисунки и таблицы, ответы на контрольные вопросы.<br><br>Титульного листа нет — вставь титульник своей группы перед оглавлением."},{"id":"vift2","subject":"info","kind":"ready","title":"Отчёт: Windows, «Проводник» + реферат","price":299,"html":"📄 <b>Готовая работа<\/b> · Word, 21 страница<br><br><b>Что внутри:<\/b><br>1. Графический интерфейс Windows 11: персонализация, панель задач, уведомления, меню «Пуск»<br>2. Программа «Проводник»: запуск, ярлыки, параметры папок, атрибуты файлов<br>3. Реферат «Система защиты информации: правовые, организационные и физические меры» со списком источников<br><br>Скриншоты с подписями, ответы на контрольные вопросы, оглавление.<br><br>Титульного листа нет — вставь титульник своей группы перед оглавлением."},{"id":"bzd_tpl","subject":"bzd","kind":"template","title":"Шаблон реферата с правильным оформлением","price":299,"html":"🧩 <b>Это шаблон, а не готовая работа под твою тему<\/b><br><br>Полностью оформленный реферат, который ты редактируешь под себя: ставишь свою тему и меняешь текст разделов. Главное здесь — <b>правильное оформление<\/b>, оно уже сделано:<br><br>• Times New Roman 14, интервал 1,5, абзацный отступ 1,25 см<br>• поля 30 / 15 / 20 / 20 мм, нумерация страниц внизу по центру<br>• автоматическое содержание — Word обновит его сам<br>• введение, 8 разделов с подразделами, заключение — каждый раздел с новой страницы<br>• список использованных источников по образцу<br><br><b>Пример наполнения:<\/b> «Чрезвычайные ситуации, угрожающие безопасности окружающей среды», 32 страницы.<br><br>⚠️ Текст-пример не для сдачи: его уже покупали другие, и антиплагиат найдёт совпадения. Замени его своим текстом или закажи «✍️ Реферат на свою тему» — его напишут заново под твою тему.<br><br>Титульного листа нет — вставь титульник своей группы перед содержанием."}],"essay":{"price":299,"html":"Пишешь тему — через 2–4 минуты после оплаты получаешь реферат в Word:<br>• введение, 3–4 главы с параграфами, заключение, список источников — 15–20 страниц<br>• оформление как в наших работах по этому предмету — или по твоему образцу, если пришлёшь файл Word<br>• бонус — памятка к защите: главные мысли и вероятные вопросы преподавателя с ответами<br><br>Текст пишет нейросеть, он уникальный. Перед сдачей обязательно прочитай работу и проверь источники и цифры — нейросеть может ошибаться. Учти, что вуз может проверять работы на антиплагиат и использование ИИ.<br><br>Титульный лист бот может сделать сам — по твоим ФИО и группе (бесплатно, кнопка перед оплатой)."},"custom":{"price":350,"html":"Нужна работа, которой нет в списке? Сделаем индивидуально: работы по другим предметам, другой формат оформления, срочные работы.<br><br><b>Как это работает:<\/b><br>1. Оплачиваешь 350 ⭐ в чате бота.<br>2. Бот сразу присылает контакт исполнителя.<br>3. Пишешь ему номер заказа и присылаешь задание: предмет, методичку (файл или фото), вариант и срок."},"fun":{"subjects":["Экономика","Инфопроцессы","История России","БЖД"],"enemies":["Excel, который сам поменял формат ячеек","будильник, который ты выключишь","дедлайн, подкравшийся незаметно","фраза «а теперь своими словами»","методичка 2009 года","вопрос «а где у вас формулы?»","сосед по общаге с колонкой","пустая ячейка в таблице вариантов","автозамена в Word","очередь к преподавателю","сериал «ещё одна серия и спать»","принтер в день сдачи"],"advice":["Сделай лабу заранее — и выспись перед защитой.","Повтори формулы в Excel: на защите спросят, откуда цифры.","Приди на консультацию — преподаватель запомнит лицо.","Не спорь с преподавателем до получения подписи.","Распечатай отчёт за день до сдачи, а не за час.","Выучи определения из введения — их спрашивают первыми.","Сохрани файл в трёх местах. Флешки предают.","Задай один умный вопрос на паре — это плюс к карме.","Начни с самого страшного предмета — дальше будет легче.","Шпаргалку к защите прочитай хотя бы один раз."],"talismans":["зачётка в обложке","синяя ручка","энергетик без сахара","калькулятор из 2010-х","счастливый носок","конспект соседа","стикер с котом на ноутбуке","термос с чаем","запасная флешка","кофе из автомата на 2 этаже"],"days":["понедельник","вторник","среда","четверг","пятница","суббота"],"questions":{"Экономика":["Что такое эластичность спроса?","Как найти точку безубыточности?","Чем бухгалтерская прибыль отличается от экономической?","Что показывает мультипликатор?","Почему кривая спроса убывает?"],"Инфопроцессы":["Что такое информация и её свойства?","Чем абсолютная ссылка отличается от относительной?","Как устроена файловая система?","Что такое алгоритм и его свойства?"],"История России":["Причины и итоги реформ Петра I?","Почему началась Смута?","Итоги отмены крепостного права?","Какое значение имела Куликовская битва?"],"БЖД":["Как классифицируют чрезвычайные ситуации?","Порядок действий при пожаре?","Что такое ПДК?","Какие бывают средства индивидуальной защиты?"]},"verdicts":[[90,"Сессия закрыта ещё до её начала"],[80,"Всё сдашь — главное не проспать"],[70,"Сдашь, если не будешь откладывать"],[0,"Будет жарко, но шансы есть"]],"price":25,"invoice":"https://t.me/$yn1950A4kErQIgAAKKzQWylDa88"},"reviews":{"count":0,"avg":0.0,"list":[]}};
 let tg = null, inTg = false;   // подключаются в attachTg(), когда загрузится скрипт Telegram
 const BLACK = "#000000";
 
@@ -295,6 +324,118 @@ const CALC_NEED = [
 ];
 const li = (arr) => `<ul class="list">${arr.map((t) => `<li>${t}</li>`).join("")}</ul>`;
 
+// тот же алгоритм, что в core/fun.py
+function fcRng(seed) {
+  let h = 0x811c9dc5;
+  for (const b of new TextEncoder().encode(seed)) h = Math.imul(h ^ b, 0x01000193) >>> 0;
+  let a = h;
+  const random = () => {
+    a = (a + 0x6D2B79F5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  return {random, randint: (lo, hi) => lo + Math.floor(random() * (hi - lo + 1)),
+          choice: (arr) => arr[Math.floor(random() * arr.length)]};
+}
+function weekKey(d) {
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const day = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - day);
+  const y = t.getUTCFullYear();
+  const w = Math.ceil(((t - Date.UTC(y, 0, 1)) / 86400000 + 1) / 7);
+  return `${y}-${w}`;
+}
+function forecast(F, uid, name, d) {
+  const r = fcRng(`${uid}:${weekKey(d || new Date())}`);
+  const chances = F.subjects.map((s) => [s, r.randint(62, 98)]);
+  const sum = chances.reduce((x, c) => x + c[1], 0);
+  const total = Math.floor((sum + 2) / 4);
+  let hardest = chances[0];
+  for (const c of chances) if (c[1] < hardest[1]) hardest = c;
+  return {name: (name || "Студент").trim().slice(0, 28), total,
+          verdict: F.verdicts.find((v) => total >= v[0])[1], chances, hardest: hardest[0],
+          enemy: r.choice(F.enemies), advice: r.choice(F.advice), talisman: r.choice(F.talismans),
+          day: r.choice(F.days), question: r.choice(F.questions[hardest[0]])};
+}
+
+// ---- 🔮 прогноз на сессию прямо в приложении
+const FC = CAT.fun || null;
+const tgUser = () => (tg && tg.initDataUnsafe && tg.initDataUnsafe.user) || null;
+const fcPaidKey = (uid) => `fc_paid:${uid}:${weekKey(new Date())}`;
+function fcPaid(uid) { try { return localStorage.getItem(fcPaidKey(uid)) === "1"; } catch (e) { return false; } }
+function fcSetPaid(uid) { try { localStorage.setItem(fcPaidKey(uid), "1"); } catch (e) {} }
+
+function openForecast() {
+  if (!FC) { openChat(`https://t.me/${CAT.bot}?start=app_fc`); return; }
+  const u = tgUser();
+  current = {kind: "fc", uid: u ? u.id : 0, name: (u && u.first_name) || "Студент"};
+  current.paid = current.uid && fcPaid(current.uid);
+  renderForecast();
+  $("#home").hidden = true; $("#detail").hidden = false;
+  window.scrollTo(0, 0);
+  if (inTg) { tg.BackButton.show(); mainBtn(); }
+  history.pushState({d: 1}, "");
+}
+
+function renderForecast(keepName) {
+  const c = current;
+  const f = forecast(FC, c.uid, c.name, new Date());
+  const lock = c.paid ? "" : " fc-lock";
+  const rows = f.chances.map(([s, p]) =>
+    `<div class="fc-row"><div class="fc-row-h"><span>${esc(s)}</span><span class="${lock.trim()}">${p}%</span></div>`
+    + `<div class="fc-bar${lock}"><i style="width:${c.paid ? p : 50}%"></i></div></div>`).join("");
+  const det = [["Главный враг", f.enemy], ["Точно спросят", `«${f.question}»`],
+               ["Талисман", `${f.talisman} · счастливый день — ${f.day}`], ["Совет", f.advice]]
+    .map(([k, v]) => `<div><small>${k}</small><p class="${lock.trim()}">${esc(c.paid ? v : "Этот текст откроется после покупки расклада")}</p></div>`).join("");
+  $("#detail").innerHTML = `<div class="fade"><div class="fc-card ${c.paid ? "" : "locked"}">`
+    + `<div class="fc-bot">@${esc(CAT.bot)} · шуточный прогноз</div>`
+    + `<div class="fc-h">Прогноз<br><span>на сессию</span></div>`
+    + `<label class="fc-name"><input id="fc-name" maxlength="28" value="${esc(f.name)}" aria-label="Имя на карточке"><small>имя ✎</small></label>`
+    + `<div class="fc-big"><b>${f.total}%</b><div>${esc(f.verdict)}<small>шанс закрыть сессию</small></div></div>`
+    + `<div class="fc-rows">${rows}</div><div class="fc-det">${det}</div>`
+    + `<div class="fc-lockbar">🔒 Шансы по предметам, главный враг и что спросят — в полном раскладе</div></div>`
+    + `<button class="cta" id="cta">${c.paid ? "📤 Отправить друзьям" : `Открыть полный расклад за ${stars(FC.price)}`}</button>`
+    + (c.paid ? `<div class="fc-note">Картинка-карточка тоже пришла в чат бота — её удобно переслать в группу.</div>`
+              : `<div class="fc-note">Прогноз шуточный — для настроения, а не вместо подготовки 🙂 Обновляется каждую неделю.</div>`)
+    + `</div>`;
+  $("#cta").onclick = fcAction;
+  const inp = $("#fc-name");
+  inp.onchange = () => { c.name = inp.value.trim() || "Студент"; renderForecast(); };
+}
+
+function fcAction() {
+  const c = current;
+  if (!c || c.kind !== "fc") return;
+  haptic();
+  if (c.paid) {
+    const f = forecast(FC, c.uid, c.name, new Date());
+    const link = `https://t.me/${CAT.bot}?start=ref_${c.uid}`;
+    openChat(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(`Мой прогноз на сессию — ${f.total}% 🔮 А какой у тебя?`)}`, true);
+    return;
+  }
+  if (inTg && FC.invoice && tg.openInvoice) {
+    tg.openInvoice(FC.invoice, (status) => {
+      if (status === "paid") {
+        c.paid = true; fcSetPaid(c.uid);
+        try { tg.HapticFeedback.notificationOccurred("success"); } catch (e) {}
+        renderForecast(); mainBtn();
+      }
+    });
+  } else {
+    openChat(`https://t.me/${CAT.bot}?start=app_fc`);
+  }
+}
+
+function mainBtn() {
+  if (!inTg || !current) return;
+  const text = current.kind === "fc"
+    ? (current.paid ? "📤 Отправить друзьям" : `Открыть полный расклад — ${FC.price} ⭐`)
+    : `Заказать за ${current.price} ⭐`;
+  tg.MainButton.setParams({text, color: "#ffffff", text_color: "#000000", is_visible: true, is_active: true});
+}
+
 function openDetail(it) {
   if (!it) return;
   current = it;
@@ -313,11 +454,7 @@ function openDetail(it) {
   $("#cta").onclick = order;
   $("#home").hidden = true; $("#detail").hidden = false;
   window.scrollTo(0, 0);
-  if (inTg) {
-    tg.BackButton.show();
-    tg.MainButton.setParams({text: `Заказать за ${it.price} ⭐`, color: "#ffffff", text_color: "#000000",
-                             is_visible: true, is_active: true});
-  }
+  if (inTg) { tg.BackButton.show(); mainBtn(); }
   history.pushState({d: 1}, "");
 }
 
@@ -331,15 +468,16 @@ function closeDetail(fromHistory) {
 
 function order() {
   if (!current) return;
+  if (current.kind === "fc") { fcAction(); return; }
   haptic();
   const start = current.start || ("app_lab_" + current.id);
   openChat(`https://t.me/${CAT.bot}?start=${encodeURIComponent(start)}`);
 }
 
-function openChat(url) {
+function openChat(url, stay) {
   if (inTg) {
     tg.openTelegramLink(url);
-    setTimeout(() => tg.close(), 400);
+    if (!stay) setTimeout(() => tg.close(), 400);
   } else {
     window.open(url, "_blank");
   }
@@ -358,8 +496,11 @@ function attachTg() {
   tg.MainButton.onClick(order);
   if (current) {                           // скрипт догрузился, когда карточка уже открыта
     tg.BackButton.show();
-    tg.MainButton.setParams({text: `Заказать за ${current.price} ⭐`, color: "#ffffff", text_color: "#000000",
-                             is_visible: true, is_active: true});
+    if (current.kind === "fc") {             // в браузере имя/id ещё не были известны — пересчитываем
+      const u = tgUser();
+      if (u && !current.uid) { current.uid = u.id; current.name = u.first_name || current.name; current.paid = fcPaid(u.id); renderForecast(); }
+    }
+    mainBtn();
   }
 }
 
@@ -374,7 +515,7 @@ function attachTg() {
   } catch (e) {}
   $("#support").textContent = "@" + CAT.support;
   $("#support").onclick = () => openChat("https://t.me/" + CAT.support);
-  $("#forecast").onclick = () => { haptic(); openChat(`https://t.me/${CAT.bot}?start=app_fc`); };
+  $("#forecast").onclick = () => { haptic(); openForecast(); };
   $("#built").textContent = CAT.built;
   renderChips(); renderList(); renderReviews();
 })();
