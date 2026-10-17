@@ -165,10 +165,66 @@
   .fade { animation: fade .2s ease-out; }
   @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
   @media (prefers-reduced-motion: reduce) { .fade { animation: none; } }
+
+  /* заставка при запуске: надпись печатается, белая линия режет экран пополам и он разъезжается.
+     Исчезает сама через CSS (даже если скрипт упадёт), тап — пропустить, показывается раз за запуск */
+  #splash { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; align-items: center;
+            justify-content: center; gap: 22px; background: var(--bg); }
+  #splash.skip { animation: sp-out .2s ease-in forwards !important; }
+  #splash svg { overflow: visible; }
+  @keyframes sp-out { to { opacity: 0; visibility: hidden; } }
+  @keyframes sp-in { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { #splash { display: none; } }
+
+  #splash { background: transparent; display: block; animation: sp-gone .01s linear 2.3s forwards; }
+  #splash .half { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; background: var(--bg); }
+  #splash .top { top: 0; animation: sp-up .5s cubic-bezier(.7,0,.2,1) 1.78s forwards; }
+  #splash .bot { top: 50%; animation: sp-down .5s cubic-bezier(.7,0,.2,1) 1.78s forwards; }
+  #splash .stage { position: absolute; left: 0; right: 0; height: 200%; display: flex; align-items: center; justify-content: center; }
+  #splash .top .stage { top: 0; }
+  #splash .bot .stage { bottom: 0; }
+  #splash .type { font-size: 34px; font-weight: 700; letter-spacing: -.025em; display: flex; align-items: center; height: 42px; }
+  #splash .type i { font-style: normal; display: inline-block; max-width: 0; overflow: hidden; white-space: pre;
+                    animation: sp-ch .01s steps(1) forwards; }
+  #splash .caret { width: 3px; height: 36px; margin-left: 3px; background: #fff; border-radius: 2px;
+                   animation: sp-blink .5s steps(1) 0s 3 forwards; }
+  #splash .ok { position: absolute; left: 0; right: 0; top: calc(50% + 34px); display: flex; align-items: center; justify-content: center;
+                gap: 8px; color: var(--hint); font-size: 15px; opacity: 0; animation: sp-title .4s ease-out 1.05s forwards; }
+  #splash .ok svg { width: 18px; height: 18px; }
+  #splash .ok path { stroke-dasharray: 30; stroke-dashoffset: 30; animation: sp-draw .35s ease-out 1.15s forwards; }
+  #splash .cut { position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: #fff;
+                 box-shadow: 0 0 12px rgba(255,255,255,.6); transform: scaleX(0);
+                 animation: sp-cut .32s cubic-bezier(.6,0,.2,1) 1.45s forwards, sp-hide .18s linear 1.85s forwards; }
+  @keyframes sp-ch { to { max-width: 1em; } }
+  @keyframes sp-blink { 50% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes sp-draw { to { stroke-dashoffset: 0; } }
+  @keyframes sp-title { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @keyframes sp-cut { to { transform: none; } }
+  @keyframes sp-hide { to { opacity: 0; } }
+  @keyframes sp-up { to { transform: translateY(-101%); } }
+  @keyframes sp-down { to { transform: translateY(101%); } }
+  @keyframes sp-gone { to { visibility: hidden; } }
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="tgstar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd84d"/><stop offset="1" stop-color="#f7a20c"/></linearGradient></defs></svg>
+<div id="splash" aria-hidden="true">
+  <div class="half top"><div class="stage"><div class="type"><i style="animation-delay:0.200s">Л</i><i style="animation-delay:0.255s">а</i><i style="animation-delay:0.310s">б</i><i style="animation-delay:0.365s">а</i><i style="animation-delay:0.420s">&nbsp;</i><i style="animation-delay:0.475s">з</i><i style="animation-delay:0.530s">а</i><i style="animation-delay:0.585s">&nbsp;</i><i style="animation-delay:0.640s">м</i><i style="animation-delay:0.695s">и</i><i style="animation-delay:0.750s">н</i><i style="animation-delay:0.805s">у</i><i style="animation-delay:0.860s">т</i><i style="animation-delay:0.915s">у</i><span class="caret"></span></div>
+      <div class="ok"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>работа готова</div></div></div><div class="half bot"><div class="stage"><div class="type"><i style="animation-delay:0.200s">Л</i><i style="animation-delay:0.255s">а</i><i style="animation-delay:0.310s">б</i><i style="animation-delay:0.365s">а</i><i style="animation-delay:0.420s">&nbsp;</i><i style="animation-delay:0.475s">з</i><i style="animation-delay:0.530s">а</i><i style="animation-delay:0.585s">&nbsp;</i><i style="animation-delay:0.640s">м</i><i style="animation-delay:0.695s">и</i><i style="animation-delay:0.750s">н</i><i style="animation-delay:0.805s">у</i><i style="animation-delay:0.860s">т</i><i style="animation-delay:0.915s">у</i><span class="caret"></span></div>
+      <div class="ok"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>работа готова</div></div></div><div class="cut"></div>
+</div>
+<script>
+  (function () {
+    const el = document.getElementById("splash");
+    try { if (sessionStorage.getItem("splash")) { el.remove(); document.documentElement.classList.add("no-splash"); return; } sessionStorage.setItem("splash", "1"); } catch (e) {}
+    const done = () => { el.remove(); document.documentElement.classList.add("no-splash"); };
+    el.addEventListener("click", () => { el.classList.add("skip"); setTimeout(done, 220); });
+    el.addEventListener("animationend", (e) => { if (e.target === el) done(); });
+    setTimeout(done, 3010);
+    setTimeout(() => { try { const w = window.Telegram && Telegram.WebApp; if (w && w.initData) w.HapticFeedback.impactOccurred("light"); } catch (e) {} }, 1500);
+    
+  })();
+</script>
 <div class="wrap">
   <section id="home" class="screen">
     <header class="hero">
