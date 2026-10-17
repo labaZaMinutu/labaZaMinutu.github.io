@@ -200,6 +200,91 @@
   @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
   @media (prefers-reduced-motion: reduce) { .fade, .wave > * { animation: none; } .seg-pill { transition: none; } }
 
+
+  /* кейсы */
+  .fun-ico.dark { background: linear-gradient(#1c1c20, #0b0b0d); border: 1px solid #2a2a2e; padding: 4px; }
+  .fun-ico.dark svg { width: 100%; height: 100%; }
+  .bx-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin: 22px 0 14px; }
+  .bx-top h2 { margin: 0; font-size: 28px; letter-spacing: -.025em; }
+  .bx-bal { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  .bx-bal span { padding: 6px 10px; border-radius: 99px; font-size: 12.5px; font-weight: 600; color: #c7c7cc;
+                 background: #111113; border: 1px solid #232326; white-space: nowrap; }
+  .bx-bal b { color: #fff; }
+  .seg2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 18px;
+          background: linear-gradient(#141416, #0e0e10); border: 1px solid #232326; margin-bottom: 14px; }
+  .seg2 .chip { transition: background .2s, color .2s; }
+  .seg2 .chip[aria-pressed="true"] { background: linear-gradient(#ffffff, #e8e8ed); color: #000;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 4px 14px rgba(0,0,0,.45); }
+  .bx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .bx-card { position: relative; display: flex; flex-direction: column; text-align: left; padding: 10px 12px 14px;
+             border-radius: 22px; border: 1px solid #232326; background: radial-gradient(120% 90% at 50% 20%, #1a1a1e 0%, #0d0d0f 70%);
+             transition: transform .12s ease-out; }
+  .bx-card:active { transform: scale(.97); }
+  .bx-card.wide { grid-column: 1 / -1; width: calc(50% - 5px); justify-self: center; }
+  .bx-card .box-svg { width: 100%; height: auto; margin: 10px 0 4px; }
+  .bx-name { font-size: 15.5px; font-weight: 700; }
+  .bx-sub { font-size: 12.5px; color: var(--hint); margin-top: 3px; display: flex; align-items: center; gap: 4px; }
+  .bx-sub .star { width: 13px; height: 13px; }
+  .bx-sub.ok { color: #9be7b4; }
+  .bx-tag { position: absolute; top: 10px; left: 10px; z-index: 1; font-size: 10.5px; font-weight: 800; letter-spacing: .06em;
+            text-transform: uppercase; padding: 4px 8px; border-radius: 99px; background: #fff; color: #000; }
+  .bx-tag.dim { background: #1c1c1f; color: #c7c7cc; border: 1px solid #2c2c30; }
+  .bx-tag.cnt { left: auto; right: 10px; }
+  .bx-krow { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px 12px 10px; margin-bottom: 10px;
+             border-radius: 20px; border: 1px solid #232326; background: linear-gradient(#141416, #0d0d0f);
+             transition: transform .12s ease-out; }
+  .bx-krow:active { transform: scale(.975); }
+  .bx-krow .key-svg { width: 96px; height: auto; flex: none; }
+  .bx-krow .bx-main { flex: 1; min-width: 0; }
+  .bx-cnt { flex: none; min-width: 44px; height: 44px; padding: 0 10px; border-radius: 14px; display: flex; align-items: center;
+            justify-content: center; font-size: 17px; font-weight: 700; background: #1b1b1e; border: 1px solid #2c2c30; }
+  .bx-cnt.on { background: #fff; color: #000; border-color: #fff; }
+  .bx-note { font-size: 13px; color: var(--dim); margin: 6px 2px 14px; line-height: 1.45; }
+  .bx-head { display: flex; justify-content: space-between; align-items: flex-start; margin: 22px 0 12px; }
+  .bx-head h2 { margin: 0; font-size: 28px; letter-spacing: -.025em; }
+  .bx-head .bx-sub { font-size: 15px; margin-top: 4px; }
+  .bx-stage { position: relative; border-radius: 26px; border: 1px solid #232326; overflow: hidden; padding: 26px 22px 18px;
+              background: radial-gradient(100% 80% at 50% 45%, #1c1c20 0%, #08080a 75%); }
+  .bx-stage .box-svg { width: 100%; height: auto; animation: bxfloat 3.2s ease-in-out infinite; }
+  @keyframes bxfloat { 50% { transform: translateY(-7px); } }
+  .cta2 { display: block; width: 100%; margin-top: 10px; padding: 14px; border-radius: 14px; text-align: center; font-weight: 600;
+          border: 1px solid #2c2c30; background: #111113; color: #fff; }
+  .cta2:active { opacity: .75; }
+  .cta.off { background: #3a3a3e; color: #8a8a8e; }
+  .in-tg .cta.keep { display: block; }
+  .pz-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .pz { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+        min-height: 104px; padding: 12px 6px 22px; border-radius: 18px; text-align: center;
+        background: radial-gradient(100% 100% at 50% 0%, #1b1b1f 0%, #0e0e10 80%); border: 1px solid #26262a; }
+  .pz.rare { border-color: #6e6e74; }
+  .pz.leg { border-color: #e8b33a; background: radial-gradient(100% 100% at 50% 0%, #2a2414 0%, #0e0e10 80%); }
+  .pz-num { font-size: 24px; font-weight: 800; letter-spacing: -.03em; }
+  .pz.leg .pz-num, .pz.leg .pz-ico b { color: #ffd84d; }
+  .pz-cap { font-size: 11.5px; color: var(--hint); line-height: 1.2; }
+  .pz-ico { position: relative; width: 34px; height: 34px; }
+  .pz-ico svg { width: 34px; height: 34px; fill: none; stroke: #ffd84d; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .pz-ico b { position: absolute; right: -14px; bottom: -4px; font-size: 14px; font-weight: 800; }
+  .pz-ch { position: absolute; bottom: 6px; left: 0; right: 0; font-size: 11px; font-weight: 700; color: #8a8a8e; }
+  /* рулетка */
+  .spin { position: relative; margin-top: 18px; height: 132px; overflow: hidden; border-radius: 22px; border: 1px solid #232326;
+          background: #08080a; -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); }
+  .spin-strip { display: flex; gap: 8px; padding: 12px 0; will-change: transform; }
+  .spin-strip .pz { flex: none; width: 104px; min-height: 106px; padding-bottom: 12px; }
+  .spin-mark { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; margin-left: -1.5px; background: #fff; z-index: 2;
+               box-shadow: 0 0 14px rgba(255,255,255,.7); border-radius: 2px; }
+  .spin-wrap { position: relative; }
+  .spin-wrap::before, .spin-wrap::after { content: ""; position: absolute; left: 50%; margin-left: -8px; z-index: 3;
+               border: 8px solid transparent; }
+  .spin-wrap::before { top: 10px; border-top-color: #fff; }
+  .spin-wrap::after { bottom: -6px; border-bottom-color: #fff; }
+  .won { text-align: center; margin-top: 20px; animation: fade .3s ease-out; }
+  .won .pz { width: 150px; margin: 0 auto; min-height: 150px; animation: wonpop .5s cubic-bezier(.3,1.6,.5,1); }
+  .won .pz-num { font-size: 36px; }
+  @keyframes wonpop { from { transform: scale(.5); opacity: 0; } }
+  .won h3 { margin: 16px 0 4px; font-size: 22px; }
+  .won p { margin: 0; color: var(--hint); font-size: 14px; }
+  @media (prefers-reduced-motion: reduce) { .bx-stage .box-svg { animation: none; } }
+
   /* заставка при запуске (3 режима, выбирает скрипт ниже):
      main  — первый запуск за день: надпись печатается, белая линия режет экран, шторки разъезжаются;
      short — повторные запуски в тот же день: только линия и шторки (~0,8 с);
@@ -337,6 +422,13 @@
     <div id="list"></div>
     <div class="note" id="list-note"></div>
 
+    <button class="fun" id="boxes" hidden>
+      <div class="fun-ico dark" id="boxes-ico"></div>
+      <div class="fun-main"><div class="fun-title">Кейсы с призами</div>
+        <div class="fun-sub">Бонусы и бесплатные работы · один кейс бесплатный</div></div>
+      <div class="fun-tag" id="boxes-tag">new</div>
+    </button>
+
     <button class="fun" id="forecast">
       <div class="fun-ico">🔮</div>
       <div class="fun-main"><div class="fun-title">Прогноз на сессию</div>
@@ -365,7 +457,7 @@
 </div>
 
 <script>
-const C = {"bot":"econom_lab_bot","support":"econom_lab_support","built":"17.10.2026","subjects":[{"code":"econ","icon":"📊","name":"Экономика"},{"code":"info","icon":"💻","name":"Введение в информационные процессы"},{"code":"hist","icon":"📜","name":"История России"},{"code":"bzd","icon":"🦺","name":"Безопасность жизнедеятельности"}],"items":[{"id":"lab34","subject":"econ","kind":"calc","title":"Лаба 3-4. Равновесие потребителя (Кобб-Дуглас)","price":299,"about":"Равновесие потребителя с функцией полезности Кобба-Дугласа TU = A·Xᵅ·Yᵝ при доходе I и ценах Pₓ и Pᵧ."},{"id":"lab03","subject":"econ","kind":"calc","title":"Максимизация прибыли конкурентной фирмы","price":299,"about":"Функция издержек TC = FC + aQ + bQ² + cQ³, минимум средних издержек и максимизация прибыли конкурентной фирмы."},{"id":"lab05","subject":"econ","kind":"calc","title":"Расчёт основных производственных фондов (ОПФ)","price":299,"about":"Стоимость здания, оборудования и основных производственных фондов цеха — по строительному объёму, цене 1 м³, мощности и списку оборудования."},{"id":"lab06","subject":"econ","kind":"calc","title":"Расчёт оборотных средств","price":299,"about":"Потребность в оборотных средствах по годовому выпуску, нормам расхода и ценам сырья и энергии."},{"id":"lab07","subject":"econ","kind":"calc","title":"Расчёт численности и фонда оплаты труда","price":299,"about":"Численность рабочих и служащих и фонд оплаты труда — по разрядам, сменам и тарифам."},{"id":"lab08","subject":"econ","kind":"calc","title":"Калькуляция, точка безубыточности, эффективность","price":299,"about":"Калькуляция себестоимости, точка безубыточности и показатели эффективности производства."},{"id":"lab09","subject":"econ","kind":"calc","title":"Обоснование целесообразности кредита","price":299,"about":"Сравнение кредитов трёх банков по сумме, сроку и ставкам: какой вариант выгоднее."},{"id":"lab10","subject":"econ","kind":"calc","title":"Модель Кейнса: фискальная политика","price":299,"about":"Модель Кейнса «доходы — расходы»: равновесный доход, мультипликаторы и последствия фискальной политики."},{"id":"lab11","subject":"econ","kind":"calc","title":"Модель IS-LM: фискальная и монетарная политика","price":299,"about":"Модель IS-LM: равновесие на рынках товаров и денег и сдвиги при фискальной и монетарной политике."},{"id":"kurs","subject":"econ","kind":"kurs","title":"Курсовая: технико-экономическое обоснование цеха","price":800,"about":"Технико-экономическое обоснование цеха одной работой: основные фонды, оборотные средства, персонал и ФОТ, калькуляция и эффективность."},{"id":"vift1","subject":"info","kind":"ready","title":"Отчёт: Word, Excel и поиск в Интернете","price":299,"html":"📄 <b>Готовая работа<\/b> · Word, 26 страниц<br><br><b>Что внутри:<\/b><br>1. Таблицы, формулы и схемы в Microsoft Word<br>2. Деловая игра «Покупаем компьютер»: офисный и графический ПК, принтер — с ценами и ссылками<br>3. Microsoft Excel, задание 43: ВПР, расширенный фильтр, сводная таблица, диаграмма, рассылка в Word<br>4. Поиск информации в Интернете: Google и Yandex, анализ организации по открытым реестрам<br><br>Введение, заключение, оглавление, подписанные рисунки и таблицы, ответы на контрольные вопросы.<br><br>Титульного листа нет — вставь титульник своей группы перед оглавлением."},{"id":"vift2","subject":"info","kind":"ready","title":"Отчёт: Windows, «Проводник» + реферат","price":299,"html":"📄 <b>Готовая работа<\/b> · Word, 21 страница<br><br><b>Что внутри:<\/b><br>1. Графический интерфейс Windows 11: персонализация, панель задач, уведомления, меню «Пуск»<br>2. Программа «Проводник»: запуск, ярлыки, параметры папок, атрибуты файлов<br>3. Реферат «Система защиты информации: правовые, организационные и физические меры» со списком источников<br><br>Скриншоты с подписями, ответы на контрольные вопросы, оглавление.<br><br>Титульного листа нет — вставь титульник своей группы перед оглавлением."},{"id":"bzd_tpl","subject":"bzd","kind":"template","title":"Шаблон реферата с правильным оформлением","price":299,"html":"🧩 <b>Это шаблон, а не готовая работа под твою тему<\/b><br><br>Полностью оформленный реферат, который ты редактируешь под себя: ставишь свою тему и меняешь текст разделов. Главное здесь — <b>правильное оформление<\/b>, оно уже сделано:<br><br>• Times New Roman 14, интервал 1,5, абзацный отступ 1,25 см<br>• поля 30 / 15 / 20 / 20 мм, нумерация страниц внизу по центру<br>• автоматическое содержание — Word обновит его сам<br>• введение, 8 разделов с подразделами, заключение — каждый раздел с новой страницы<br>• список использованных источников по образцу<br><br><b>Пример наполнения:<\/b> «Чрезвычайные ситуации, угрожающие безопасности окружающей среды», 32 страницы.<br><br>⚠️ Текст-пример не для сдачи: его уже покупали другие, и антиплагиат найдёт совпадения. Замени его своим текстом или закажи «✍️ Реферат на свою тему» — его напишут заново под твою тему.<br><br>Титульного листа нет — вставь титульник своей группы перед содержанием."}],"essay":{"price":299,"html":"Пишешь тему — через 2–4 минуты после оплаты получаешь реферат в Word:<br>• введение, 3–4 главы с параграфами, заключение, список источников — 15–20 страниц<br>• оформление как в наших работах по этому предмету — или по твоему образцу, если пришлёшь файл Word<br>• бонус — памятка к защите: главные мысли и вероятные вопросы преподавателя с ответами<br><br>Текст пишет нейросеть, он уникальный. Перед сдачей обязательно прочитай работу и проверь источники и цифры — нейросеть может ошибаться. Учти, что вуз может проверять работы на антиплагиат и использование ИИ.<br><br>Титульный лист бот может сделать сам — по твоим ФИО и группе (бесплатно, кнопка перед оплатой)."},"custom":{"price":350,"html":"Нужна работа, которой нет в списке? Сделаем индивидуально: работы по другим предметам, другой формат оформления, срочные работы.<br><br><b>Как это работает:<\/b><br>1. Оплачиваешь 350 ⭐ в чате бота.<br>2. Бот сразу присылает контакт исполнителя.<br>3. Пишешь ему номер заказа и присылаешь задание: предмет, методичку (файл или фото), вариант и срок."},"fun":{"subjects":["Экономика","Инфопроцессы","История России","БЖД"],"enemies":["Excel, который сам поменял формат ячеек","будильник, который ты выключишь","дедлайн, подкравшийся незаметно","фраза «а теперь своими словами»","методичка 2009 года","вопрос «а где у вас формулы?»","сосед по общаге с колонкой","пустая ячейка в таблице вариантов","автозамена в Word","очередь к преподавателю","сериал «ещё одна серия и спать»","принтер в день сдачи"],"advice":["Сделай лабу заранее — и выспись перед защитой.","Повтори формулы в Excel: на защите спросят, откуда цифры.","Приди на консультацию — преподаватель запомнит лицо.","Не спорь с преподавателем до получения подписи.","Распечатай отчёт за день до сдачи, а не за час.","Выучи определения из введения — их спрашивают первыми.","Сохрани файл в трёх местах. Флешки предают.","Задай один умный вопрос на паре — это плюс к карме.","Начни с самого страшного предмета — дальше будет легче.","Шпаргалку к защите прочитай хотя бы один раз."],"talismans":["зачётка в обложке","синяя ручка","энергетик без сахара","калькулятор из 2010-х","счастливый носок","конспект соседа","стикер с котом на ноутбуке","термос с чаем","запасная флешка","кофе из автомата на 2 этаже"],"days":["понедельник","вторник","среда","четверг","пятница","суббота"],"questions":{"Экономика":["Что такое эластичность спроса?","Как найти точку безубыточности?","Чем бухгалтерская прибыль отличается от экономической?","Что показывает мультипликатор?","Почему кривая спроса убывает?"],"Инфопроцессы":["Что такое информация и её свойства?","Чем абсолютная ссылка отличается от относительной?","Как устроена файловая система?","Что такое алгоритм и его свойства?"],"История России":["Причины и итоги реформ Петра I?","Почему началась Смута?","Итоги отмены крепостного права?","Какое значение имела Куликовская битва?"],"БЖД":["Как классифицируют чрезвычайные ситуации?","Порядок действий при пожаре?","Что такое ПДК?","Какие бывают средства индивидуальной защиты?"]},"known":[["эконом","Экономика"],["информ","Инфопроцессы"],["истор","История России"],["бжд","БЖД"],["безопасн","БЖД"]],"generic":["Основные понятия курса «{s}»?","Что разбирали на первой лекции по предмету «{s}»?","Какая тема курса «{s}» самая важная и почему?","Приведи пример из практики по предмету «{s}».","Зачем курс «{s}» нужен в твоей профессии?"],"max":6,"verdicts":[[90,"Сессия закрыта ещё до её начала"],[80,"Всё сдашь — главное не проспать"],[70,"Сдашь, если не будешь откладывать"],[0,"Будет жарко, но шансы есть"]],"price":25,"invoice":"https://t.me/$yn1950A4kErQIgAAKKzQWylDa88"},"pack":{"size":4,"price":897,"one":299},"reviews":{"count":0,"avg":0.0,"list":[]}};
+const C = {"bot":"econom_lab_bot","support":"econom_lab_support","built":"17.10.2026","subjects":[{"code":"econ","icon":"📊","name":"Экономика"},{"code":"info","icon":"💻","name":"Введение в информационные процессы"},{"code":"hist","icon":"📜","name":"История России"},{"code":"bzd","icon":"🦺","name":"Безопасность жизнедеятельности"}],"items":[{"id":"lab34","subject":"econ","kind":"calc","title":"Лаба 3-4. Равновесие потребителя (Кобб-Дуглас)","price":299,"about":"Равновесие потребителя с функцией полезности Кобба-Дугласа TU = A·Xᵅ·Yᵝ при доходе I и ценах Pₓ и Pᵧ."},{"id":"lab03","subject":"econ","kind":"calc","title":"Максимизация прибыли конкурентной фирмы","price":299,"about":"Функция издержек TC = FC + aQ + bQ² + cQ³, минимум средних издержек и максимизация прибыли конкурентной фирмы."},{"id":"lab05","subject":"econ","kind":"calc","title":"Расчёт основных производственных фондов (ОПФ)","price":299,"about":"Стоимость здания, оборудования и основных производственных фондов цеха — по строительному объёму, цене 1 м³, мощности и списку оборудования."},{"id":"lab06","subject":"econ","kind":"calc","title":"Расчёт оборотных средств","price":299,"about":"Потребность в оборотных средствах по годовому выпуску, нормам расхода и ценам сырья и энергии."},{"id":"lab07","subject":"econ","kind":"calc","title":"Расчёт численности и фонда оплаты труда","price":299,"about":"Численность рабочих и служащих и фонд оплаты труда — по разрядам, сменам и тарифам."},{"id":"lab08","subject":"econ","kind":"calc","title":"Калькуляция, точка безубыточности, эффективность","price":299,"about":"Калькуляция себестоимости, точка безубыточности и показатели эффективности производства."},{"id":"lab09","subject":"econ","kind":"calc","title":"Обоснование целесообразности кредита","price":299,"about":"Сравнение кредитов трёх банков по сумме, сроку и ставкам: какой вариант выгоднее."},{"id":"lab10","subject":"econ","kind":"calc","title":"Модель Кейнса: фискальная политика","price":299,"about":"Модель Кейнса «доходы — расходы»: равновесный доход, мультипликаторы и последствия фискальной политики."},{"id":"lab11","subject":"econ","kind":"calc","title":"Модель IS-LM: фискальная и монетарная политика","price":299,"about":"Модель IS-LM: равновесие на рынках товаров и денег и сдвиги при фискальной и монетарной политике."},{"id":"kurs","subject":"econ","kind":"kurs","title":"Курсовая: технико-экономическое обоснование цеха","price":800,"about":"Технико-экономическое обоснование цеха одной работой: основные фонды, оборотные средства, персонал и ФОТ, калькуляция и эффективность."},{"id":"vift1","subject":"info","kind":"ready","title":"Отчёт: Word, Excel и поиск в Интернете","price":299,"html":"📄 <b>Готовая работа<\/b> · Word, 26 страниц<br><br><b>Что внутри:<\/b><br>1. Таблицы, формулы и схемы в Microsoft Word<br>2. Деловая игра «Покупаем компьютер»: офисный и графический ПК, принтер — с ценами и ссылками<br>3. Microsoft Excel, задание 43: ВПР, расширенный фильтр, сводная таблица, диаграмма, рассылка в Word<br>4. Поиск информации в Интернете: Google и Yandex, анализ организации по открытым реестрам<br><br>Введение, заключение, оглавление, подписанные рисунки и таблицы, ответы на контрольные вопросы.<br><br>Титульного листа нет — вставь титульник своей группы перед оглавлением."},{"id":"vift2","subject":"info","kind":"ready","title":"Отчёт: Windows, «Проводник» + реферат","price":299,"html":"📄 <b>Готовая работа<\/b> · Word, 21 страница<br><br><b>Что внутри:<\/b><br>1. Графический интерфейс Windows 11: персонализация, панель задач, уведомления, меню «Пуск»<br>2. Программа «Проводник»: запуск, ярлыки, параметры папок, атрибуты файлов<br>3. Реферат «Система защиты информации: правовые, организационные и физические меры» со списком источников<br><br>Скриншоты с подписями, ответы на контрольные вопросы, оглавление.<br><br>Титульного листа нет — вставь титульник своей группы перед оглавлением."},{"id":"bzd_tpl","subject":"bzd","kind":"template","title":"Шаблон реферата с правильным оформлением","price":299,"html":"🧩 <b>Это шаблон, а не готовая работа под твою тему<\/b><br><br>Полностью оформленный реферат, который ты редактируешь под себя: ставишь свою тему и меняешь текст разделов. Главное здесь — <b>правильное оформление<\/b>, оно уже сделано:<br><br>• Times New Roman 14, интервал 1,5, абзацный отступ 1,25 см<br>• поля 30 / 15 / 20 / 20 мм, нумерация страниц внизу по центру<br>• автоматическое содержание — Word обновит его сам<br>• введение, 8 разделов с подразделами, заключение — каждый раздел с новой страницы<br>• список использованных источников по образцу<br><br><b>Пример наполнения:<\/b> «Чрезвычайные ситуации, угрожающие безопасности окружающей среды», 32 страницы.<br><br>⚠️ Текст-пример не для сдачи: его уже покупали другие, и антиплагиат найдёт совпадения. Замени его своим текстом или закажи «✍️ Реферат на свою тему» — его напишут заново под твою тему.<br><br>Титульного листа нет — вставь титульник своей группы перед содержанием."}],"essay":{"price":299,"html":"Пишешь тему — через 2–4 минуты после оплаты получаешь реферат в Word:<br>• введение, 3–4 главы с параграфами, заключение, список источников — 15–20 страниц<br>• оформление как в наших работах по этому предмету — или по твоему образцу, если пришлёшь файл Word<br>• бонус — памятка к защите: главные мысли и вероятные вопросы преподавателя с ответами<br><br>Текст пишет нейросеть, он уникальный. Перед сдачей обязательно прочитай работу и проверь источники и цифры — нейросеть может ошибаться. Учти, что вуз может проверять работы на антиплагиат и использование ИИ.<br><br>Титульный лист бот может сделать сам — по твоим ФИО и группе (бесплатно, кнопка перед оплатой)."},"custom":{"price":350,"html":"Нужна работа, которой нет в списке? Сделаем индивидуально: работы по другим предметам, другой формат оформления, срочные работы.<br><br><b>Как это работает:<\/b><br>1. Оплачиваешь 350 ⭐ в чате бота.<br>2. Бот сразу присылает контакт исполнителя.<br>3. Пишешь ему номер заказа и присылаешь задание: предмет, методичку (файл или фото), вариант и срок."},"fun":{"subjects":["Экономика","Инфопроцессы","История России","БЖД"],"enemies":["Excel, который сам поменял формат ячеек","будильник, который ты выключишь","дедлайн, подкравшийся незаметно","фраза «а теперь своими словами»","методичка 2009 года","вопрос «а где у вас формулы?»","сосед по общаге с колонкой","пустая ячейка в таблице вариантов","автозамена в Word","очередь к преподавателю","сериал «ещё одна серия и спать»","принтер в день сдачи"],"advice":["Сделай лабу заранее — и выспись перед защитой.","Повтори формулы в Excel: на защите спросят, откуда цифры.","Приди на консультацию — преподаватель запомнит лицо.","Не спорь с преподавателем до получения подписи.","Распечатай отчёт за день до сдачи, а не за час.","Выучи определения из введения — их спрашивают первыми.","Сохрани файл в трёх местах. Флешки предают.","Задай один умный вопрос на паре — это плюс к карме.","Начни с самого страшного предмета — дальше будет легче.","Шпаргалку к защите прочитай хотя бы один раз."],"talismans":["зачётка в обложке","синяя ручка","энергетик без сахара","калькулятор из 2010-х","счастливый носок","конспект соседа","стикер с котом на ноутбуке","термос с чаем","запасная флешка","кофе из автомата на 2 этаже"],"days":["понедельник","вторник","среда","четверг","пятница","суббота"],"questions":{"Экономика":["Что такое эластичность спроса?","Как найти точку безубыточности?","Чем бухгалтерская прибыль отличается от экономической?","Что показывает мультипликатор?","Почему кривая спроса убывает?"],"Инфопроцессы":["Что такое информация и её свойства?","Чем абсолютная ссылка отличается от относительной?","Как устроена файловая система?","Что такое алгоритм и его свойства?"],"История России":["Причины и итоги реформ Петра I?","Почему началась Смута?","Итоги отмены крепостного права?","Какое значение имела Куликовская битва?"],"БЖД":["Как классифицируют чрезвычайные ситуации?","Порядок действий при пожаре?","Что такое ПДК?","Какие бывают средства индивидуальной защиты?"]},"known":[["эконом","Экономика"],["информ","Инфопроцессы"],["истор","История России"],["бжд","БЖД"],["безопасн","БЖД"]],"generic":["Основные понятия курса «{s}»?","Что разбирали на первой лекции по предмету «{s}»?","Какая тема курса «{s}» самая важная и почему?","Приведи пример из практики по предмету «{s}».","Зачем курс «{s}» нужен в твоей профессии?"],"max":6,"verdicts":[[90,"Сессия закрыта ещё до её начала"],[80,"Всё сдашь — главное не проспать"],[70,"Сдашь, если не будешь откладывать"],[0,"Будет жарко, но шансы есть"]],"price":25,"invoice":"https://t.me/$yn1950A4kErQIgAAKKzQWylDa88"},"pack":{"size":4,"price":897,"one":299},"boxes":{"bonus_share":0.5,"free_every":604800,"ref_every":5,"prizes":{"b10":{"title":"10 бонусов","kind":"bonus","n":10},"b20":{"title":"20 бонусов","kind":"bonus","n":20},"b30":{"title":"30 бонусов","kind":"bonus","n":30},"b50":{"title":"50 бонусов","kind":"bonus","n":50},"b75":{"title":"75 бонусов","kind":"bonus","n":75},"b100":{"title":"100 бонусов","kind":"bonus","n":100},"b150":{"title":"150 бонусов","kind":"bonus","n":150},"b200":{"title":"200 бонусов","kind":"bonus","n":200},"b250":{"title":"250 бонусов","kind":"bonus","n":250},"w1":{"title":"Работа бесплатно","kind":"gift","n":1},"w2":{"title":"2 работы бесплатно","kind":"gift","n":2},"w4":{"title":"4 работы бесплатно","kind":"gift","n":4}},"cases":[{"id":"free","name":"Подарочный кейс","how":"free","price":0,"invoice":"","prizes":[{"code":"b10","chance":45},{"code":"b20","chance":30},{"code":"b30","chance":17},{"code":"b50","chance":7},{"code":"w1","chance":1}]},{"id":"ref","name":"Реферальный кейс","how":"ref","price":0,"invoice":"","prizes":[{"code":"b100","chance":50},{"code":"b150","chance":30},{"code":"w1","chance":17},{"code":"w2","chance":3}]},{"id":"black","name":"Чёрный кейс","how":"stars","price":49,"invoice":"https://t.me/$GdGDH0A4mEoyHQAA5RdDQrLw1AI","prizes":[{"code":"b30","chance":35},{"code":"b50","chance":30},{"code":"b75","chance":20},{"code":"b100","chance":10},{"code":"b150","chance":4},{"code":"w1","chance":1}]},{"id":"risk","name":"Риск кейс","how":"stars","price":149,"invoice":"https://t.me/$ts-ZXUA4mEozHQAAtV3uz9xyyXs","prizes":[{"code":"b50","chance":40},{"code":"b100","chance":25},{"code":"b200","chance":15},{"code":"w1","chance":13},{"code":"w2","chance":6},{"code":"w4","chance":1}]},{"id":"gold","name":"Золотой кейс","how":"stars","price":299,"invoice":"https://t.me/$0H_Wh0A4mEo0HQAAV0fnCtYfuB4","prizes":[{"code":"b150","chance":30},{"code":"b250","chance":30},{"code":"w1","chance":20},{"code":"w2","chance":15},{"code":"w4","chance":5}]}],"work_price":299},"reviews":{"count":0,"avg":0.0,"list":[]}};
 let tg = null, inTg = false;   // подключаются в attachTg(), когда загрузится скрипт Telegram
 const BLACK = "#000000";
 
@@ -702,8 +794,315 @@ function fcAction() {
   }
 }
 
+// ---- рисунки кейсов и ключей (SVG), в стиле аватарки: чёрное тело, белые грани, восьмиугольная эмблема
+const OCT = (cx, cy, r) => Array.from({length: 8}, (_, i) => {
+  const a = Math.PI / 8 + i * Math.PI / 4;
+  return `${(cx + r * Math.cos(a)).toFixed(1)},${(cy + r * Math.sin(a)).toFixed(1)}`;
+}).join(" ");
+// значки на эмблеме (в квадрате 24×24, рисуются цветом fill)
+const BOX_ICON = {
+  free:  '<path d="M4 11h16v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><rect x="3" y="7" width="18" height="4" rx="1"/><path d="M11 7h2v14h-2z" fill="#0b0b0d"/><path d="M12 7c-2-4-6-4-6-1.5S10 7 12 7zm0 0c2-4 6-4 6-1.5S14 7 12 7z"/>',
+  ref:   '<circle cx="9" cy="8" r="3.4"/><path d="M2.5 20c0-3.6 2.9-6.4 6.5-6.4s6.5 2.8 6.5 6.4z"/><circle cx="17" cy="9" r="2.6"/><path d="M15.7 14.1c3.3.2 5.8 2.6 5.8 5.9h-4.4c0-2.4-.5-4.3-1.4-5.9z"/>',
+  black: '<circle cx="12" cy="9" r="4.2"/><path d="M10 11.5h4l1.3 9h-6.6z"/>',
+  risk:  '<path d="M13.6 2 4.5 13.6h6.3L9.4 22l9.1-11.8h-6.4z"/>',
+  gold:  '<path d="M3 8.5l4.6 3.8L12 4.5l4.4 7.8L21 8.5l-2 10.5H5z"/><rect x="5" y="19.6" width="14" height="2.4" rx="1"/>',
+};
+const BOX_THEME = {
+  free:  {a: "#ffffff", glow: "255,255,255"},
+  ref:   {a: "#ffffff", glow: "255,255,255"},
+  black: {a: "#8e8e93", glow: "160,160,170", emb: "#ffffff"},
+  risk:  {a: "#ffffff", glow: "255,255,255", stripes: true},
+  gold:  {a: "url(#gGold)", glow: "255,196,60", gold: true},
+};
+const GOLD_DEFS = '<linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1b0"/><stop offset=".45" stop-color="#ffd84d"/><stop offset="1" stop-color="#e8940a"/></linearGradient>';
+
+function boxSVG(id, uid) {
+  const u = uid || id, t = BOX_THEME[id] || BOX_THEME.free, a = t.gold ? `url(#gGold-${u})` : t.a;
+  const emb = t.emb || a;
+  const strap = (x1t, x2t, x1b, x2b) => `<path d="M${x1t} 36 H${x2t} L${x2b} 74 H${x1b} Z" fill="${a}"/>`;
+  const bow = id === "free" ? `<path d="M110 36c-10-16-30-20-30-8 0 8 14 9 30 8zm0 0c10-16 30-20 30-8 0 8-14 9-30 8z" fill="none" stroke="${a}" stroke-width="5" stroke-linejoin="round"/>` : "";
+  const stripes = t.stripes ? Array.from({length: 7}, (_, i) =>
+      `<path d="M${40 + i * 22} 150 l12 -12 h7 l-12 12z" fill="${a}" opacity=".9"/>`).join("") : "";
+  return `<svg viewBox="0 0 220 175" class="box-svg" aria-hidden="true"><defs>${t.gold ? GOLD_DEFS.replace('id="gGold"', `id="gGold-${u}"`) : ""}
+    <radialGradient id="glow-${u}" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="rgba(${t.glow},.22)"/><stop offset="1" stop-color="rgba(${t.glow},0)"/></radialGradient>
+    <linearGradient id="body-${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1d21"/><stop offset="1" stop-color="#050506"/></linearGradient>
+    <linearGradient id="lid-${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2b31"/><stop offset="1" stop-color="#101013"/></linearGradient></defs>
+    <ellipse cx="110" cy="96" rx="104" ry="78" fill="url(#glow-${u})"/>
+    <ellipse cx="110" cy="160" rx="78" ry="7" fill="#000" opacity=".8"/>
+    ${bow}
+    <path d="M30 80 L42 42 Q44 36 51 36 H169 Q176 36 178 42 L190 80 Z" fill="url(#lid-${u})" stroke="${a}" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M54 44 H166" stroke="${a}" stroke-width="2" opacity=".35" stroke-linecap="round"/>
+    ${strap(70, 80, 64, 75)}${strap(140, 150, 145, 156)}
+    <rect x="30" y="84" width="160" height="70" rx="10" fill="url(#body-${u})" stroke="${a}" stroke-width="4"/>
+    <rect x="42" y="96" width="16" height="46" rx="4" fill="none" stroke="${a}" stroke-width="2" opacity=".35"/>
+    <rect x="162" y="96" width="16" height="46" rx="4" fill="none" stroke="${a}" stroke-width="2" opacity=".35"/>
+    <rect x="64" y="86" width="11" height="66" fill="${a}"/><rect x="145" y="86" width="11" height="66" fill="${a}"/>
+    ${stripes}
+    <path d="M31 132 V144 Q31 153 40 153 H52" fill="none" stroke="${a}" stroke-width="7" stroke-linecap="round"/>
+    <path d="M189 132 V144 Q189 153 180 153 H168" fill="none" stroke="${a}" stroke-width="7" stroke-linecap="round"/>
+    <rect x="22" y="74" width="176" height="14" rx="5" fill="${a}"/>
+    <polygon points="${OCT(110, 82, 25)}" fill="#0b0b0d" stroke="${emb}" stroke-width="4.5" stroke-linejoin="round"/>
+    <polygon points="${OCT(110, 82, 17)}" fill="${emb}"/>
+    <g transform="translate(99 71) scale(.92)" fill="#0b0b0d">${BOX_ICON[id] || ""}</g>
+  </svg>`;
+}
+
+function keySVG(id, uid) {
+  const u = "k" + (uid || id), t = BOX_THEME[id] || BOX_THEME.free, a = t.gold ? `url(#gGold-${u})` : t.a;
+  const emb = t.emb || a;
+  return `<svg viewBox="0 0 240 90" class="key-svg" aria-hidden="true"><defs>${t.gold ? GOLD_DEFS.replace('id="gGold"', `id="gGold-${u}"`) : ""}
+    <linearGradient id="kb-${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26262b"/><stop offset="1" stop-color="#0a0a0c"/></linearGradient></defs>
+    <rect x="80" y="37" width="138" height="15" rx="4" fill="${a}"/>
+    <rect x="80" y="29" width="15" height="31" rx="3.5" fill="${a}"/><rect x="99" y="31" width="8" height="27" rx="3" fill="${a}" opacity=".55"/>
+    <path d="M172 52 h12 v15 h-12z M190 52 h10 v9 h-10z M205 52 h13 v18 h-13z" fill="${a}"/>
+    <polygon points="${OCT(46, 45, 36)}" fill="url(#kb-${u})" stroke="${emb}" stroke-width="6" stroke-linejoin="round"/>
+    <polygon points="${OCT(46, 45, 22)}" fill="none" stroke="${emb}" stroke-width="3" opacity=".5"/>
+    <g transform="translate(35 34) scale(.92)" fill="${emb}">${BOX_ICON[id] || ""}</g>
+  </svg>`;
+}
+
+// ---- кейсы с ключами. Ключи и призы выдаёт бот: он открывает приложение со своим списком ключей в адресе (?s=…),
+// приз уже на счёте — здесь кейс только «открывается» рулеткой. Открытые ключи помним в браузере.
+const BX = CAT.boxes || null;
+const BXQ = new URLSearchParams(location.search);
+const BXS = (() => {
+  try {
+    const s = BXQ.get("s");
+    if (!s) return null;
+    const j = JSON.parse(atob(s.replace(/-/g, "+").replace(/_/g, "/")));
+    return {k: j.k || [], b: j.b || 0, g: j.g || 0, f: j.f || 0, r: j.r || 0};
+  } catch (e) { return null; }
+})();
+const bxCase = (id) => BX.cases.find((c) => c.id === id);
+function bxOpened() { try { return JSON.parse(localStorage.getItem("bx_opened") || "[]"); } catch (e) { return []; } }
+function bxMarkOpened(id) {
+  try { const a = bxOpened(); if (!a.includes(id)) { a.push(id); localStorage.setItem("bx_opened", JSON.stringify(a.slice(-60))); } } catch (e) {}
+}
+const bxUnopened = (cid) => BXS ? BXS.k.filter(([id, c]) => c === cid && !bxOpened().includes(id)) : [];
+function bxBalance() {                 // баланс без ещё не открытых призов — чтобы не подсмотреть
+  if (!BXS) return null;
+  let b = BXS.b, g = BXS.g;
+  BXS.k.filter(([id]) => !bxOpened().includes(id)).forEach(([, , p]) => {
+    const P = BX.prizes[p]; if (!P) return;
+    if (P.kind === "gift") g -= P.n; else b -= P.n;
+  });
+  return {b: Math.max(0, b), g: Math.max(0, g)};
+}
+function bxLeft(ts) {
+  const s = Math.max(0, Math.round(ts - Date.now() / 1000));
+  const d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
+  const p2 = (n) => String(n).padStart(2, "0");
+  return (d ? `${d}д ` : "") + `${p2(h)}:${p2(m)}:${p2(x)}`;
+}
+const freeReady = () => !BXS || !BXS.f || BXS.f * 1000 <= Date.now();
+function bxSub(c, short) {
+  if (c.how === "free") return freeReady() ? `<div class="bx-sub ok">${BXS ? "Можно открыть" : "Бесплатно раз в неделю"}</div>`
+                                           : `<div class="bx-sub" data-timer="${BXS.f}">Через ${bxLeft(BXS.f)}</div>`;
+  if (c.how === "ref") return `<div class="bx-sub">${BXS ? `${BXS.r}/${BX.ref_every} друзей` : `За каждых ${BX.ref_every} друзей`}</div>`;
+  const n = bxUnopened(c.id).length;
+  return `<div class="bx-sub">${stars(c.price)}${!short && BXS ? ` · ключей: ${n}` : ""}</div>`;
+}
+const DOC_SVG = '<svg viewBox="0 0 24 24"><path d="M7 3h7.5L19 7.5V21H7z"/><path d="M14 3v5h5"/><path d="M10 12.5h6M10 16.5h6"/></svg>';
+function pzTile(code, chance) {
+  const P = BX.prizes[code];
+  if (!P) return "";
+  const gift = P.kind === "gift";
+  const rar = gift ? " leg" : (chance != null && chance <= 15 ? " rare" : "");
+  const face = gift
+    ? `<div class="pz-ico">${DOC_SVG}${P.n > 1 ? `<b>×${P.n}</b>` : ""}</div><div class="pz-cap">${P.n > 1 ? `${P.n} работы` : "Работа"}<br>бесплатно</div>`
+    : `<div class="pz-num">+${P.n}</div><div class="pz-cap">бонусов</div>`;
+  return `<div class="pz${rar}">${face}${chance != null ? `<div class="pz-ch">${chance}%</div>` : ""}</div>`;
+}
+
+function openBoxes(tab) {
+  if (!BX) { openChat(`https://t.me/${CAT.bot}?start=app_cases`); return; }
+  current = {kind: "bx", step: "list", tab: tab || "catalog"};
+  renderBoxes();
+  $("#home").hidden = true; $("#detail").hidden = false;
+  window.scrollTo(0, 0);
+  if (inTg) { tg.BackButton.show(); mainBtn(); }
+  history.pushState({d: 1}, "");
+}
+
+let bxTick = null;
+function bxTimers() {
+  clearInterval(bxTick);
+  bxTick = setInterval(() => {
+    const els = document.querySelectorAll("[data-timer]");
+    if (!els.length) { clearInterval(bxTick); return; }
+    els.forEach((el) => { const t = +el.dataset.timer; el.textContent = (el.dataset.pre || "Через ") + bxLeft(t); });
+  }, 1000);
+}
+
+function renderBoxes() {
+  const c = current;
+  c.step = "list";
+  const bal = bxBalance();
+  const head = `<div class="bx-top"><h2>Кейсы</h2>${bal ? `<div class="bx-bal"><span>Бонусы <b>${bal.b}</b></span>`
+      + (bal.g ? `<span>Работ бесплатно <b>${bal.g}</b></span>` : "") + `</div>` : ""}</div>`
+    + `<div class="seg2"><button class="chip" data-tab="catalog" aria-pressed="${c.tab === "catalog"}">Каталог</button>`
+    + `<button class="chip" data-tab="keys" aria-pressed="${c.tab === "keys"}">Мои ключи</button></div>`;
+  let body;
+  if (c.tab === "catalog") {
+    body = `<div class="bx-grid wave">` + BX.cases.map((x, i) => {
+      const tag = x.how === "free" ? `<span class="bx-tag">Бесплатно</span>`
+        : x.how === "ref" ? `<span class="bx-tag dim">За ${BX.ref_every} друзей</span>` : "";
+      const n = bxUnopened(x.id).length;
+      return `<button class="bx-card${i === BX.cases.length - 1 && BX.cases.length % 2 ? " wide" : ""}" data-box="${x.id}" style="animation-delay:${i * 40}ms">`
+        + tag + (n ? `<span class="bx-tag cnt">🔑 ${n}</span>` : "") + boxSVG(x.id, "c" + x.id)
+        + `<div class="bx-name">${esc(x.name)}</div>${bxSub(x, true)}</button>`;
+    }).join("") + `</div>`
+      + `<div class="bx-note">Внутри — бонусы и бесплатные работы в боте. Пустых кейсов нет, шансы указаны у каждого приза. `
+      + `Бонусами можно оплатить до ${Math.round(BX.bonus_share * 100)}% цены работы.</div>`;
+  } else {
+    body = (BXS ? "" : `<div class="bx-note">Твои ключи видны, когда приложение открыто кнопкой «Каталог» в чате бота. `
+                       + `Купленный ключ бот присылает в чат с кнопкой «Открыть кейс».</div>`)
+      + `<div class="wave">` + BX.cases.map((x, i) => {
+        const n = bxUnopened(x.id).length;
+        const cnt = x.how === "free" ? (freeReady() ? `<div class="bx-cnt on">🎁</div>` : `<div class="bx-cnt">⏳</div>`)
+          : `<div class="bx-cnt${n ? " on" : ""}">${n}</div>`;
+        return `<button class="bx-krow" data-box="${x.id}" style="animation-delay:${i * 40}ms">${keySVG(x.id, "r" + x.id)}`
+          + `<div class="bx-main"><div class="bx-name">${esc(x.name)}</div>${bxSub(x)}</div>${cnt}</button>`;
+      }).join("") + `</div>`;
+  }
+  $("#detail").innerHTML = `<div class="fade">${head}${body}</div>`;
+  $("#detail").querySelectorAll(".seg2 .chip").forEach((b) => b.onclick = () => {
+    if (b.dataset.tab === c.tab) return;
+    haptic("sel"); c.tab = b.dataset.tab; renderBoxes();
+  });
+  $("#detail").querySelectorAll("[data-box]").forEach((b) => b.onclick = () => { haptic(); openBox(b.dataset.box); });
+  bxTimers();
+  if (inTg) mainBtn();
+}
+
+function bxPrimary(x) {
+  // что делает главная кнопка на экране кейса: [текст, активна ли]
+  if (bxUnopened(x.id).length) return ["Открыть кейс", true];
+  if (x.how === "free") return freeReady() ? ["Открыть бесплатно", true] : [`Доступно через ${bxLeft(BXS.f)}`, false];
+  if (x.how === "ref") return ["Пригласить друзей", true];
+  return [`Купить ключ — ${x.price} ⭐`, true];
+}
+
+function openBox(id) {
+  current.step = "case"; current.box = id;
+  renderBox();
+  window.scrollTo(0, 0);
+}
+
+function renderBox() {
+  const c = current, x = bxCase(c.box);
+  const n = bxUnopened(x.id).length;
+  const [label, active] = bxPrimary(x);
+  const sub = x.how === "free" ? "Бесплатно · раз в неделю" : x.how === "ref" ? `Ключ за каждых ${BX.ref_every} друзей`
+            : `Ключ: ${stars(x.price)}`;
+  const extra = n && x.how === "stars" ? `<button class="cta2" id="bx-buy">Купить ещё ключ — ${stars(x.price)}</button>` : "";
+  const ref = x.how === "ref" && BXS ? `<div class="bx-note">Друзей по твоей ссылке до следующего ключа: ${BXS.r} из ${BX.ref_every}.</div>` : "";
+  $("#detail").innerHTML = `<div class="fade"><div class="bx-head"><div><h2>${esc(x.name)}</h2><div class="bx-sub">${sub}</div></div>`
+    + (n ? `<span class="bx-cnt on">🔑 ${n}</span>` : "") + `</div>`
+    + `<div class="bx-stage">${boxSVG(x.id, "s" + x.id)}</div>`
+    + `<button class="cta keep${active ? "" : " off"}" id="bx-go" ${x.how === "free" && !active ? `data-timer="${BXS.f}" data-pre="Доступно через "` : ""}>${label}</button>`
+    + extra + ref
+    + `<div class="sec-title">Что внутри · шансы</div><div class="pz-grid">`
+    + x.prizes.map((p) => pzTile(p.code, p.chance)).join("") + `</div>`
+    + `<div class="bx-note">Приз разыгрывается в момент выдачи ключа и сразу ложится на твой счёт в боте. `
+    + `Бонусы закрывают до ${Math.round(BX.bonus_share * 100)}% цены работы, «работа бесплатно» — любая лаба (кроме курсовой), `
+    + `готовая работа или реферат. Всё применяется само при следующем заказе.</div></div>`;
+  $("#bx-go").onclick = bxAction;
+  const buy = $("#bx-buy");
+  if (buy) buy.onclick = () => { haptic(); bxBuy(x); };
+  bxTimers();
+  if (inTg) { tg.MainButton.hide(); }
+}
+
+function bxAction() {
+  const c = current;
+  if (!c || c.kind !== "bx") return;
+  if (c.step === "bought") { if (inTg) tg.close(); else closeDetail(false); return; }
+  if (c.step !== "case") return;
+  const x = bxCase(c.box);
+  const keys = bxUnopened(x.id);
+  haptic();
+  if (keys.length) { bxSpin(keys[0]); return; }
+  if (x.how === "free") { if (freeReady()) openChat(`https://t.me/${CAT.bot}?start=app_freekey`); return; }
+  if (x.how === "ref") {
+    const u = tgUser();
+    const link = `https://t.me/${CAT.bot}` + (u ? `?start=ref_${u.id}` : "");
+    openChat(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent("Лабы, рефераты и готовые работы для студентов — по ссылке скидка на первую работу")}`, true);
+    return;
+  }
+  bxBuy(x);
+}
+
+function bxBuy(x) {
+  if (inTg && x.invoice && tg.openInvoice) {
+    tg.openInvoice(x.invoice, (status) => {
+      if (status !== "paid") return;
+      try { tg.HapticFeedback.notificationOccurred("success"); } catch (e) {}
+      current.step = "bought"; renderBought(x);
+    });
+  } else {
+    openChat(`https://t.me/${CAT.bot}?start=app_key_${x.id}`);
+  }
+}
+
+function renderBought(x) {
+  $("#detail").innerHTML = `<div class="fade"><div class="bx-stage" style="margin-top:22px">${keySVG(x.id, "b" + x.id)}</div>`
+    + `<div class="won"><h3>Ключ куплен 🔑</h3><p>Бот уже прислал его в чат. Нажми «Открыть кейс» в сообщении — `
+    + `и здесь закрутится рулетка.</p></div><button class="cta keep" id="bx-go">Перейти в чат</button></div>`;
+  $("#bx-go").onclick = bxAction;
+  if (inTg) tg.MainButton.hide();
+}
+
+function bxSpin(key) {
+  const [kid, cid, prize] = key, x = bxCase(cid), c = current;
+  c.step = "spin"; c.spinning = true;
+  if (inTg) { tg.MainButton.hide(); }
+  // лента из случайных призов по их шансам; выигрыш — на позиции WIN
+  const pick = () => { let r = Math.random() * 100; for (const p of x.prizes) { if ((r -= p.chance) < 0) return p.code; } return x.prizes[0].code; };
+  const N = 46, WIN = 40;
+  const strip = Array.from({length: N}, (_, i) => i === WIN ? prize : pick());
+  $("#detail").innerHTML = `<div class="fade"><div class="bx-head"><div><h2>${esc(x.name)}</h2><div class="bx-sub">Открываем…</div></div></div>`
+    + `<div class="spin-wrap"><div class="spin"><div class="spin-strip" id="strip">${strip.map((p) => pzTile(p)).join("")}</div></div>`
+    + `<div class="spin-mark"></div></div><div id="won"></div></div>`;
+  const el = $("#strip"), W = 112, box = el.parentElement.clientWidth;
+  const target = WIN * W + 52 - box / 2 + (Math.random() * 60 - 30);
+  el.style.transform = "translateX(0)";
+  const t0 = performance.now(), D = 5600;
+  const ease = (t) => 1 - Math.pow(1 - t, 4);
+  let last = -1;
+  (function frame(now) {
+    const t = Math.min(1, (now - t0) / D), x0 = target * ease(t);
+    el.style.transform = `translateX(${-x0}px)`;
+    const idx = Math.floor((x0 + box / 2) / W);
+    if (idx !== last) { last = idx; try { tg.HapticFeedback.selectionChanged(); } catch (e) {} }
+    if (t < 1) requestAnimationFrame(frame); else bxWon(kid, x, prize);
+  })(t0);
+}
+
+function bxWon(kid, x, prize) {
+  const c = current, P = BX.prizes[prize];
+  c.spinning = false; c.step = "won";
+  bxMarkOpened(kid);
+  try { tg.HapticFeedback.notificationOccurred("success"); } catch (e) {}
+  const how = P.kind === "gift" ? "Следующая лаба, готовая работа или реферат — бесплатно, применится само."
+                                : `Оплатят до ${Math.round(BX.bonus_share * 100)}% следующей работы — применятся сами.`;
+  $("#won").innerHTML = `<div class="won">${pzTile(prize)}<h3>${esc(P.title)}</h3><p>Уже на твоём счёте в боте. ${how}</p></div>`
+    + `<button class="cta keep" id="bx-ok">Забрать</button>`;
+  $("#bx-ok").onclick = () => { haptic(); c.step = "case"; renderBox(); window.scrollTo(0, 0); };
+}
+
+function bxBack() {
+  // «Назад» внутри кейсов: из кейса — к списку; во время рулетки — игнорируем
+  const c = current;
+  if (!c || c.kind !== "bx") return false;
+  if (c.spinning) return true;
+  if (c.step !== "list") { renderBoxes(); window.scrollTo(0, 0); return true; }
+  return false;
+}
+
 function mainBtn() {
   if (!inTg || !current) return;
+  if (current.kind === "bx") { tg.MainButton.hide(); return; }
   const text = current.kind === "fc"
     ? (current.step === "subjects" ? "Показать прогноз"
        : current.paid ? "📤 Отправить друзьям" : `Открыть полный расклад — ${FC.price} ⭐`)
@@ -735,6 +1134,7 @@ function openDetail(it) {
 
 function closeDetail(fromHistory) {
   if (!current) return;
+  if (bxBack()) { if (fromHistory) history.pushState({d: 1}, ""); return; }
   current = null;
   $("#detail").hidden = true; $("#home").hidden = false;
   movePill(false);
@@ -745,6 +1145,7 @@ function closeDetail(fromHistory) {
 function order() {
   if (!current) return;
   if (current.kind === "fc") { fcAction(); return; }
+  if (current.kind === "bx") { bxAction(); return; }
   haptic();
   const start = current.start || ("app_lab_" + current.id);
   openChat(`https://t.me/${CAT.bot}?start=${encodeURIComponent(start)}`);
@@ -792,8 +1193,18 @@ function attachTg() {
   $("#support").textContent = "@" + CAT.support;
   $("#support").onclick = () => openChat("https://t.me/" + CAT.support);
   $("#forecast").onclick = () => { haptic(); openForecast(); };
+  if (BX) {
+    $("#boxes").hidden = false;
+    $("#boxes-ico").innerHTML = boxSVG("gold", "home");
+    $("#boxes-tag").textContent = BXS && BX.cases.some((x) => bxUnopened(x.id).length) ? "есть ключи"
+                                  : (freeReady() ? "бесплатно" : "new");
+    $("#boxes").onclick = () => { haptic(); openBoxes(); };
+  }
   $("#built").textContent = CAT.built;
   renderChips(); renderList(); renderReviews();
+  const o = +BXQ.get("o");                      // пришли по кнопке «Открыть кейс» из чата
+  const k = o && BXS && BXS.k.find(([id]) => id === o);
+  if (BX && k) { openBoxes(); openBox(k[1]); }
 })();
 </script>
 </body>
