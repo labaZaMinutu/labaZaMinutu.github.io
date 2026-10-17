@@ -202,6 +202,18 @@
 
 
   /* кейсы */
+  .bx-banner { display: flex; align-items: center; gap: 12px; width: 100%; margin: -6px 0 14px; padding: 8px 14px 8px 8px;
+               border-radius: 18px; border: 1px solid #2c2c30; color: #8a8a8e;
+               background: linear-gradient(100deg, #1c1a12 0%, #111113 45%, #0d0d0f 100%); transition: transform .12s ease-out; }
+  .bx-banner[hidden] { display: none; }
+  .bx-banner:active { transform: scale(.975); }
+  .bx-banner-ico { flex: none; width: 52px; height: 44px; }
+  .bx-banner-ico svg { width: 100%; height: 100%; }
+  .bx-banner-main { flex: 1; min-width: 0; display: flex; flex-direction: column; text-align: left; }
+  .bx-banner-main b { color: #fff; font-size: 15px; }
+  .bx-banner-main small { font-size: 12.5px; margin-top: 1px; color: var(--hint); }
+  .bx-banner-tag { flex: none; font-size: 11.5px; font-weight: 800; padding: 5px 9px; border-radius: 99px; background: #fff; color: #000; }
+  .bx-banner-tag:empty { display: none; }
   .fun-ico.dark { background: linear-gradient(#1c1c20, #0b0b0d); border: 1px solid #2a2a2e; padding: 4px; }
   .fun-ico.dark svg { width: 100%; height: 100%; }
   .bx-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin: 22px 0 14px; }
@@ -417,6 +429,11 @@
       </div>
       <div id="rating"></div>
     </header>
+    <button class="bx-banner" id="bx-banner" hidden>
+      <span class="bx-banner-ico" id="bx-banner-ico"></span>
+      <span class="bx-banner-main"><b>Кейсы с призами</b><small id="bx-banner-sub">Бонусы и работы бесплатно</small></span>
+      <span class="bx-banner-tag" id="bx-banner-tag"></span><svg class="chev" width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="M1 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
     <nav class="chips" aria-label="Предметы"><div class="seg" id="chips"></div></nav>
     <div class="sec-title" id="list-title"></div>
     <div id="list"></div>
@@ -1199,6 +1216,12 @@ function attachTg() {
     $("#boxes-tag").textContent = BXS && BX.cases.some((x) => bxUnopened(x.id).length) ? "есть ключи"
                                   : (freeReady() ? "бесплатно" : "new");
     $("#boxes").onclick = () => { haptic(); openBoxes(); };
+    const nk = BXS ? BX.cases.reduce((a, x) => a + bxUnopened(x.id).length, 0) : 0;
+    $("#bx-banner").hidden = false;
+    $("#bx-banner-ico").innerHTML = boxSVG("gold", "banner");
+    $("#bx-banner-sub").textContent = nk ? "Есть ключи — открой кейс" : "Бонусы и работы бесплатно";
+    $("#bx-banner-tag").textContent = nk ? `🔑 ${nk}` : (freeReady() ? "1 бесплатный" : "");
+    $("#bx-banner").onclick = () => { haptic(); openBoxes(nk ? "keys" : "catalog"); };
   }
   $("#built").textContent = CAT.built;
   renderChips(); renderList(); renderReviews();
